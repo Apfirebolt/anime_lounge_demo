@@ -39,7 +39,7 @@ async def health_check():
 
 
 # --- Frontend Static Files & SPA Catch-All ---
-DIST_DIR = Path(__file__).resolve().parent / "client" / "dist"
+DIST_DIR = Path(__file__).resolve().parent / "dist"
 ASSETS_DIR = DIST_DIR / "assets"
 
 if ASSETS_DIR.exists():
