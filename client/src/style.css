@@ -1,7 +1,7 @@
-@import "tailwindcss";
-
 /* 1. Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import "tailwindcss";
 
 /* 2. Tailwind v4 Theme Configuration (Creates utilities like font-heading, bg-brand, etc.) */
 @theme {

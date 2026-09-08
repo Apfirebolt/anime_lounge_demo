@@ -1,10 +1,10 @@
 <template>
   <div>
     <h1>Welcome to Anime Lounge</h1>
-    <p>This is register page</p>
+    <p>Your cozy online space for anime enthusiasts.</p>
   </div>
 </template>
 
 <script setup>
-// RegisterPage
+// HomePage
 </script>
