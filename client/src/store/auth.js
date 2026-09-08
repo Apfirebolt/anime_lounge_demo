@@ -55,7 +55,7 @@ export const useAuth = defineStore("auth", {
     async registerAction(registerData) {
       this.loading = true;
       try {
-        const response = await httpClient.post("auth/register", registerData);
+        const response = await httpClient.post("auth/", registerData);
         if (response.data && (response.status === 201 || response.status === 200)) {
           this.success = true;
           toast.success("Account created successfully! Please sign in.", toastOptions);
