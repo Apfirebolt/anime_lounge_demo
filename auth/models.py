@@ -1,5 +1,4 @@
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import relationship
 from config.db import Base
 
 from .import hashing
@@ -14,9 +13,6 @@ class User(Base):
     firstName = Column(String(50))
     lastName = Column(String(50))
     password = Column(String(255))
-
-    posts = relationship("Blog", back_populates="owner")
-    comments = relationship("Comments", back_populates="owner")
 
     def __init__(self, username: str, email: str, password: str, firstName: str, lastName: str, *args, **kwargs) -> None:
         self.username = username
