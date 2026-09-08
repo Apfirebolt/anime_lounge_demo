@@ -1,0 +1,1 @@
+import{n as e,r as t,t as n}from"./index-CF7KGq-2.js";var r={__name:`Login`,setup(r){return(r,i)=>(t(),e(`div`,null,[...i[0]||=[n(`h1`,null,`Welcome to Anime Lounge`,-1),n(`p`,null,`This is login page`,-1)]]))}};export{r as default};
