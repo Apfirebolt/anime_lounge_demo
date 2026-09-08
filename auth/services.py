@@ -1,5 +1,6 @@
 from fastapi import HTTPException, status
 from typing import List, Optional
+from sqlalchemy.orm import Session
 
 from . import schema
 from . import models
