@@ -4,7 +4,7 @@ import axios from 'axios';
 // let baseURL = 'http://localhost:8000/api/';
 
 // for prod
-baseURL = 'https://anime-lounge-demo.vercel.app/api/'; // Replace with your actual production API URL
+let baseURL = 'https://anime-lounge-demo.vercel.app/api/'; // Replace with your actual production API URL
 
 axios.interceptors.request.use(
     (config) => {
