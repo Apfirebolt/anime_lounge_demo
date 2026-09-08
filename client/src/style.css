@@ -1,19 +1,39 @@
+@import "tailwindcss";
+
+/* 1. Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* 2. Tailwind v4 Theme Configuration (Creates utilities like font-heading, bg-brand, etc.) */
+@theme {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+  /* Theme color tokens accessible as bg-brand-*, text-brand-*, etc. */
+  --color-brand-primary: #aa3bff;
+  --color-brand-primary-hover: #9325e8;
+  --color-brand-secondary: #06b6d4;
+  --color-brand-accent: #f43f5e;
+}
+
+/* 3. Base Custom Properties & Scoped Styling */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #ffffff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
-  --accent: #aa3bff;
+  --accent: var(--color-brand-primary);
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* Use the new font families */
+  --sans: var(--font-body);
+  --heading: var(--font-heading);
+  --mono: var(--font-mono);
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -52,12 +72,13 @@
 
 body {
   margin: 0;
+  font-family: var(--font-body);
 }
 
 h1,
 h2 {
-  font-family: var(--heading);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 600;
   color: var(--text-h);
 }
 
@@ -70,6 +91,7 @@ h1 {
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
@@ -79,13 +101,14 @@ h2 {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
 
 code,
 .counter {
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   display: inline-flex;
   border-radius: 4px;
   color: var(--text-h);
